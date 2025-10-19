@@ -19,9 +19,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-      - uses: actions/checkout@v4
+        uses: actions/checkout@v4
       - name: Setup SAP CLI
-      - uses: amannn/sap-nwrfc-action@v1.1
+        uses: amannn/sap-nwrfc-action@v1.1
       - with: 
           sap-nwrfc-exe: ${{secrets.SAP_NWRFC_EXE }}
           sap-nwrfc-lib: ${{secrets.SAP_NWRFC_LIB }}
