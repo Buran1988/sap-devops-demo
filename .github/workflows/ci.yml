@@ -20,7 +20,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Run ABAP Linter
-        uses: abaplint/abaplint-action@v4
+        uses: abaplint/actions-abaplint@v1
         with:
           config: abaplint.json
 
