@@ -1,0 +1,12 @@
+{
+  "global": {
+    "files": "/src/",
+    "skipGeneratedGatewayClasses": true
+  },
+  "syntax": {
+    "version": "v702"
+  },
+  "rules": {
+    "check_syntax": true
+  }
+}
