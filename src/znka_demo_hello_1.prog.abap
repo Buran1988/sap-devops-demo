@@ -7,3 +7,5 @@ REPORT ZNKA_DEMO_HELLO_1.
 
 WRITE 'Hello!'.
 WRITE 'Hello again!'.
+
+WRITE 'Hello again and again!'.
