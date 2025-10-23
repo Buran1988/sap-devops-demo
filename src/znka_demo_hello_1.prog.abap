@@ -5,6 +5,6 @@
 *&---------------------------------------------------------------------*
 REPORT znka_demo_hello_1.
 
-WRITE / 'Hello everybody! 423542345344346436'.
+WRITE / 'Hello everybody! 42354tryrt346436'.
 
 WRITE: / 'Всем привет!'.
