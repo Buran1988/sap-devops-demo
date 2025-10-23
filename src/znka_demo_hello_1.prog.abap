@@ -5,6 +5,6 @@
 *&---------------------------------------------------------------------*
 REPORT znka_demo_hello_1.
 
-WRITE / 'Hello!'.
+WRITE / 'Hello everybody!'.
 
 WRITE: / 'Всем привет!'.
