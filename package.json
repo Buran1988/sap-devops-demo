@@ -1,0 +1,8 @@
+{
+  "name": "sap-devops-demo",
+  "version": "1.0.0",
+  "description": "SAP DevOps Demo",
+  "devDependencies": {
+    "@abaplint/cli": "latest"
+  }
+}

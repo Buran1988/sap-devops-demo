@@ -34,7 +34,7 @@ jobs:
 
       - name: Run ABAP Unit Tests
         run: |
-          abaplint --exclude=node_modules '**/*.abap'
+          npx abaplint --exclude=node_modules '**/*.abap'
 
   build:
     runs-on: ubuntu-latest
