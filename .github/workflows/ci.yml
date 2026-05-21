@@ -11,17 +11,16 @@ jobs:
   abaplint:
     name: abaplint – синтаксический анализ
     runs-on: ubuntu-latest
+    permissions:
+      checks: write        # нужно для публикации аннотаций через Checks API
+      contents: read
     steps:
       - name: Checkout кода
         uses: actions/checkout@v4
 
       - name: Запуск abaplint
         uses: abaplint/actions-abaplint@main
-        # actions-abaplint@0.4.0 содержит баг: npm install падает с
-        # "Tracker idealTree already exists" и не устанавливает @octokit/rest.
-        # Используем @main — стабильная ветка без этого бага.
-        # Для аннотаций нужен GITHUB_TOKEN; в форках он read-only,
-        # поэтому шаг пропускается при PR из чужого fork.
+        # В форках GITHUB_TOKEN read-only, поэтому шаг пропускается при PR из чужого fork
         if: >
           github.event_name == 'push' ||
           github.event.pull_request.head.repo.full_name == github.repository
@@ -32,6 +31,8 @@ jobs:
   unit-tests:
     name: ABAP Unit Tests (transpiler)
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
     steps:
       - name: Checkout кода
         uses: actions/checkout@v4
