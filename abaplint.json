@@ -1,103 +1,66 @@
 {
   "$schema": "https://schema.abaplint.org/schema.json",
   "global": {
-    "files": "/src/**",
-    "exclude": [],
-    "useApackDependencies": false
+    "files": "/src/**/*.*",
+    "skipGeneratedFunctionGroups": false,
+    "exclude": []
+  },
+  "syntax": {
+    "version": "v750",
+    "errorNamespace": "^(Z|Y|LCL_|TY_|LIF_)"
   },
   "rules": {
-    "allowed_object_types": {},
-    "ambiguous_statement": {},
-    "begin_end_comments": {},
-    "check_ddic": {},
-    "check_include": {},
-    "check_subrc": {},
-    "check_transformation_exists": {},
-    "check_variables": {},
-    "colon_missing_space": {},
-    "commented_code": {},
-    "contain_far_from_start": {},
+    "parser_error": true,
+    "check_syntax": true,
+    "begin_end_names": true,
+    "xml_consistency": true,
+    "global_class": true,
+    "implement_methods": true,
+    "method_implemented_twice": true,
+    "superclass_final": true,
+    "unknown_types": true,
+    "check_ddic": true,
+    "check_include": true,
+    "empty_statement": true,
+    "keyword_case": {
+      "style": "upper",
+      "ignoreExceptions": true,
+      "ignoreLowerClassImplmentationStatement": true,
+      "ignoreGlobalClassBoundary": false,
+      "ignoreKeywords": []
+    },
+    "whitespace_end": true,
+    "colon_missing_space": true,
+    "double_space": true,
+    "space_before_dot": {
+      "excludeNewline": true
+    },
+    "line_length": {
+      "length": 255
+    },
     "contains_tab": {
       "exclude": []
     },
+    "functional_writing": {
+      "ignoreExceptions": true
+    },
+    "exporting": true,
+    "empty_line_in_statement": {
+      "allowChained": false
+    },
+    "max_one_statement": true,
+    "unused_variables": true,
+    "unreachable_code": true,
+    "exit_or_check": true,
     "cyclomatic_complexity": {
       "max": 20
     },
-    "description_empty": {},
-    "double_space": {},
-    "downport": {},
-    "empty_line_in_statement": {},
-    "empty_statement": {},
-    "exit_or_check": {},
-    "exporting": {},
-    "form_tables_obsolete": {},
-    "functional_writing": {},
-    "global_class": {},
-    "identical_conditions": {},
-    "identical_form_names": {},
-    "if_in_if": {},
-    "inline_data_old_versions": {},
-    "keyword_case": {
-      "style": "upper"
-    },
-    "line_length": {
-      "length": 200
-    },
-    "line_only_punc": {},
-    "local_class_naming": {},
-    "local_testclass_location": {},
-    "local_variable_names": {},
-    "main_file_contents": {},
-    "max_one_statement": {},
-    "message_exists": {},
     "method_length": {
-      "max": 100
+      "statements": 100,
+      "errorWhenEmpty": false
     },
-    "method_overwrites_builtin": {},
-    "method_parameter_names": {},
-    "missing_start_of_include": {},
-    "modify_only_own_db_tables": {},
-    "msag_consistency": {},
-    "names_no_dash": {},
     "nesting": {
       "max": 5
-    },
-    "newline_between_methods": {
-      "lines": 3
-    },
-    "no_public_attributes": {},
-    "object_naming": {},
-    "obsolete_statement": {},
-    "parser_error": {},
-    "preferred_compare_operator": {},
-    "prefix_is_current_class": {},
-    "reduce_string_templates": {},
-    "remove_descriptions": {},
-    "rfc_error_handling": {},
-    "select_add_order_by": {},
-    "select_performance": {},
-    "short_case": {
-      "length": 1,
-      "skip": []
-    },
-    "sicf_consistency": {},
-    "space_before_colon": {},
-    "space_before_dot": {},
-    "sql_escape_host_variables": {},
-    "start_at_tab": {},
-    "superfluous_value": {},
-    "sy-subrc_check": {},
-    "try_without_catch": {},
-    "type_form_parameters": {},
-    "types_naming": {},
-    "unknown_types": {},
-    "unreachable_code": {},
-    "unused_variables": {},
-    "use_bool_expression": {},
-    "use_class_based_exceptions": {},
-    "use_line_exists": {},
-    "use_new": {},
-    "whitespace_end": {},
-    "xml_consistency": {}
+    }
   }
 }

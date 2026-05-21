@@ -16,9 +16,12 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Запуск abaplint
-        uses: abaplint/actions-abaplint@0.4.0
-        # GITHUB_TOKEN нужен для публикации аннотаций через Checks API.
-        # Для форков он read-only, поэтому шаг пропускается при PR из чужого fork.
+        uses: abaplint/actions-abaplint@main
+        # actions-abaplint@0.4.0 содержит баг: npm install падает с
+        # "Tracker idealTree already exists" и не устанавливает @octokit/rest.
+        # Используем @main — стабильная ветка без этого бага.
+        # Для аннотаций нужен GITHUB_TOKEN; в форках он read-only,
+        # поэтому шаг пропускается при PR из чужого fork.
         if: >
           github.event_name == 'push' ||
           github.event.pull_request.head.repo.full_name == github.repository
