@@ -7,4 +7,8 @@ REPORT znka_demo_hello_1.
 
 WRITE / 'Hello everybody!'.
 
-WRITE: / 'Всем привет! ********'.
+WRITE: / 'Всем привет! +++++++'.
+
+DO 15 TIMES.
+  WRITE: / 'Это шаг:', sy-index.
+ENDDO.
