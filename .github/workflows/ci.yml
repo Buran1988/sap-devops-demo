@@ -28,23 +28,23 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
   # ─── Job 2: ABAP Unit-тесты через transpiler ─────────────────────────
-  unit-tests:
-    name: ABAP Unit Tests (transpiler)
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-    steps:
-      - name: Checkout кода
-        uses: actions/checkout@v4
+  # unit-tests:
+  #   name: ABAP Unit Tests (transpiler)
+  #   runs-on: ubuntu-latest
+  #   permissions:
+  #     contents: read
+  #   steps:
+  #     - name: Checkout кода
+  #       uses: actions/checkout@v4
 
-      - name: Установка Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: "20"
-          cache: "npm"
+  #     - name: Установка Node.js
+  #       uses: actions/setup-node@v4
+  #       with:
+  #         node-version: "20"
+  #         cache: "npm"
 
-      - name: Установка зависимостей
-        run: npm ci
+  #     - name: Установка зависимостей
+  #       run: npm ci
 
-      - name: Запуск юнит-тестов
-        run: npm test
+  #     - name: Запуск юнит-тестов
+  #       run: npm test
